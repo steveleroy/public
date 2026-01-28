@@ -32,12 +32,77 @@
         button:hover {
             background-color: #0056b3;
         }
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            display: none;
+        }
+        table.visible {
+            display: table;
+        }
+        table, th, td {
+            border: 1px solid #333;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Hello</h1>
-        <button>Coucou !!!!</button>
+        <button id="myButton">Coucou !!!!</button>
+        
+        <table id="myTable">
+            <thead>
+                <tr>
+                    <th>Colonne 1</th>
+                    <th>Colonne 2</th>
+                    <th>Colonne 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ligne 1, Col 1</td>
+                    <td>Ligne 1, Col 2</td>
+                    <td>Ligne 1, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Ligne 2, Col 1</td>
+                    <td>Ligne 2, Col 2</td>
+                    <td>Ligne 2, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Ligne 3, Col 1</td>
+                    <td>Ligne 3, Col 2</td>
+                    <td>Ligne 3, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Ligne 4, Col 1</td>
+                    <td>Ligne 4, Col 2</td>
+                    <td>Ligne 4, Col 3</td>
+                </tr>
+                <tr>
+                    <td>Ligne 5, Col 1</td>
+                    <td>Ligne 5, Col 2</td>
+                    <td>Ligne 5, Col 3</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+
+    <script>
+        const button = document.getElementById('myButton');
+        const table = document.getElementById('myTable');
+
+        button.addEventListener('click', function() {
+            table.classList.toggle('visible');
+        });
+    </script>
 </body>
 </html>
